@@ -39,6 +39,9 @@ ai-бот, ответы в чатах, нейросеть, artificial intelligen
 ### Ссылка для размещения
 https://t.me/blinjop_bot
 
+### Лендинг
+https://b1kkkembergss.github.io/tg-autopilot/
+
 ### Контакты
 Поддержка: https://t.me/Richhantr
 
