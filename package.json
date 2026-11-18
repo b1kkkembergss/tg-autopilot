@@ -1,0 +1,17 @@
+{
+  "name": "tg-autopilot",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Секретарь для Telegram Business: автоответы от имени аккаунта",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "admin": "node src/admin_bot.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

@@ -1,0 +1,296 @@
+<!doctype html>
+<!--
+  Лендинг для бота TG Автопилот (@blinjop_bot).
+  Готов к публикации на GitHub Pages (рекомендуется источник: /docs).
+-->
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TG Автопилот — бот, который ведёт переписку за тебя</title>
+  <meta name="description" content="Телеграм-бот, который сам отвечает в чатах от твоего имени: AI-стили общения, своя персона, сводка по диалогам. Бесплатно до 5 чатов, подписка от 149 ⭐ — оплата прямо в Telegram." />
+  <meta name="keywords" content="телеграм бот, автоответчик telegram, автопилот переписки, telegram business, ai бот, бот секретарь, ответы в чатах, нейросеть telegram" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TG Автопилот — бот, который ведёт переписку за тебя" />
+  <meta property="og:description" content="AI-секретарь для Telegram: отвечает в чатах за тебя, свои стили общения, сводка по диалогам. Бесплатно до 5 чатов." />
+  <meta property="og:url" content="https://t.me/blinjop_bot" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TG Автопилот",
+    "applicationCategory": "CommunicationApplication",
+    "operatingSystem": "Telegram",
+    "description": "Бот для Telegram, который ведёт переписку от имени аккаунта: AI-стили общения, свои персоны, сводка по диалогам и реферальная программа. Оплата звёздами Telegram.",
+    "url": "https://t.me/blinjop_bot"
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b0f1c;
+      --bg2: #111731;
+      --card: rgba(255, 255, 255, 0.04);
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #eef1f8;
+      --muted: #9aa3b8;
+      --accent: #2aabee;
+      --accent2: #8b7cf6;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(42,171,238,.18), transparent 60%),
+                  radial-gradient(900px 500px at -10% 30%, rgba(139,124,246,.14), transparent 60%),
+                  linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 0;
+    }
+    .logo { font-weight: 800; font-size: 1.25rem; letter-spacing: .02em; }
+    .logo span { color: var(--accent); }
+    .btn {
+      display: inline-block; padding: 12px 26px; border-radius: 12px;
+      font-weight: 700; font-size: 1rem; transition: transform .15s, filter .15s;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; }
+    .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+    .btn-sm { padding: 9px 18px; font-size: .92rem; }
+
+    .hero { padding: 72px 0 56px; text-align: center; }
+    .hero h1 {
+      font-size: clamp(1.9rem, 4.6vw, 3.1rem);
+      line-height: 1.15; letter-spacing: -.01em; margin-bottom: 18px;
+    }
+    .hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero p { color: var(--muted); font-size: 1.12rem; max-width: 640px; margin: 0 auto 32px; }
+    .hero .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .stats { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-top: 42px; color: var(--muted); font-size: .95rem; }
+    .stats b { display: block; color: var(--text); font-size: 1.45rem; }
+
+    section { padding: 56px 0; }
+    h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 12px; letter-spacing: -.01em; }
+    .sub { color: var(--muted); margin-bottom: 34px; max-width: 640px; }
+
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .step {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px;
+    }
+    .step .num {
+      width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      font-weight: 800; margin-bottom: 14px;
+    }
+    .step b { display: block; margin-bottom: 6px; }
+    .step p { color: var(--muted); font-size: .95rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+    .card .ico { font-size: 1.6rem; margin-bottom: 12px; display: block; }
+    .card b { display: block; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: .95rem; }
+
+    .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+    .plan {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px; text-align: center; position: relative;
+    }
+    .plan.best { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 10px 40px rgba(42,171,238,.15); }
+    .plan .tag {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--accent); color: #fff; font-size: .78rem; font-weight: 700;
+      padding: 3px 12px; border-radius: 999px; white-space: nowrap;
+    }
+    .plan h3 { margin-bottom: 4px; }
+    .plan .price { font-size: 2rem; font-weight: 800; margin: 10px 0 2px; }
+    .plan .price small { font-size: 1rem; font-weight: 600; color: var(--muted); }
+    .plan .perk { color: var(--muted); font-size: .9rem; margin-bottom: 16px; }
+    .free-note { text-align: center; color: var(--muted); margin-top: 20px; font-size: .95rem; }
+    .free-note b { color: var(--text); }
+
+    details {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px 22px; margin-bottom: 12px;
+    }
+    summary { font-weight: 700; cursor: pointer; }
+    details p { color: var(--muted); margin-top: 10px; }
+
+    .cta-band { text-align: center; padding: 64px 0; }
+    .cta-band h2 { margin-bottom: 10px; }
+    .cta-band p { color: var(--muted); margin-bottom: 26px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 28px 0 40px;
+      display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+      color: var(--muted); font-size: .92rem;
+    }
+    @media (max-width: 560px) {
+      header .btn { display: none; }
+      .hero { padding: 48px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">TG <span>Автопилот</span></div>
+      <a class="btn btn-primary btn-sm" href="https://t.me/blinjop_bot">Открыть бота</a>
+    </header>
+
+    <section class="hero">
+      <h1>Переписка в Telegram,<br />которая <em>отвечает сама</em></h1>
+      <p>Бот ведёт диалоги от твоего имени: реагирует как ты, в нужной манере, пока ты занят. Ты подключаешь — он отвечает, а тебе остаётся только сводка.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://t.me/blinjop_bot">Попробовать бесплатно</a>
+        <a class="btn btn-ghost" href="#how">Как это работает</a>
+      </div>
+      <div class="stats">
+        <div><b>1 минута</b>на подключение</div>
+        <div><b>до 5 чатов</b>бесплатно навсегда</div>
+        <div><b>149 ⭐</b>подписка от</div>
+        <div><b>свои стили</b>персона, манера, цели</div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>Как это работает</h2>
+      <p class="sub">Три шага — и бот отвечает в чатах сам, от твоего имени.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <b>Подключи бота</b>
+          <p>Открой свой профиль в Telegram и включи «Автоматизацию чатов» — выбери этого бота.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <b>Выбери стиль</b>
+          <p>Встроенные стили или свой: персона, манера общения, цели диалога и запреты.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <b>Бот ведёт диалог</b>
+          <p>Отвечает от твоего имени, как живой человек. Сводка покажет, где нужен именно ты.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>Возможности</h2>
+      <p class="sub">Всё, чтобы переписка не ждала, пока ты занят.</p>
+      <div class="grid">
+        <div class="card">
+          <span class="ico">🎨</span>
+          <b>Стили общения</b>
+          <p>Встроенные стили всегда доступны. Свои: задай персону, манеру, цели и запреты — бот будет звучать как ты.</p>
+        </div>
+        <div class="card">
+          <span class="ico">📊</span>
+          <b>Сводка по диалогам</b>
+          <p>За сегодня, 3 дня или неделю: о чём говорили, чем закончилось и где нужен твой ответ.</p>
+        </div>
+        <div class="card">
+          <span class="ico">⚡</span>
+          <b>Ответы от твоего имени</b>
+          <p>Работает через штатную автоматизацию чатов Telegram — собеседник пишет тебе, отвечает бот.</p>
+        </div>
+        <div class="card">
+          <span class="ico">👥</span>
+          <b>Приглашай друзей</b>
+          <p>Один друг — пробный доступ. Каждый друг даёт +3 дня подписки Pro. Расти без лишних трат.</p>
+        </div>
+        <div class="card">
+          <span class="ico">⭐</span>
+          <b>Оплата звёздами</b>
+          <p>Подписка покупается звёздами Telegram прямо в боте — никаких внешних сервисов и карт.</p>
+        </div>
+        <div class="card">
+          <span class="ico">🆘</span>
+          <b>Поддержка</b>
+          <p>Сложности с подключением или оплатой — напиши владельцу бота, поможет лично.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Тарифы</h2>
+      <p class="sub">Бесплатный тариф не заканчивается: встроенные стили и до 5 чатов — навсегда.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Неделя</h3>
+          <div class="price">149 <small>⭐</small></div>
+          <div class="perk">свой стиль и все чаты на неделю</div>
+          <a class="btn btn-ghost" href="https://t.me/blinjop_bot">Выбрать</a>
+        </div>
+        <div class="plan best">
+          <div class="tag">🔥 Выгоднее всего</div>
+          <h3>Месяц</h3>
+          <div class="price">490 <small>⭐</small></div>
+          <div class="perk">свой стиль и все чаты на месяц</div>
+          <a class="btn btn-primary" href="https://t.me/blinjop_bot">Выбрать</a>
+        </div>
+        <div class="plan">
+          <h3>3 месяца</h3>
+          <div class="price">1290 <small>⭐</small></div>
+          <div class="perk">то же на 3 месяца — выгоднее, чем помесячно</div>
+          <a class="btn btn-ghost" href="https://t.me/blinjop_bot">Выбрать</a>
+        </div>
+        <div class="plan">
+          <h3>Год</h3>
+          <div class="price">4400 <small>⭐</small></div>
+          <div class="perk">максимальная выгода — примерно 367 ₽ в месяц</div>
+          <a class="btn btn-ghost" href="https://t.me/blinjop_bot">Выбрать</a>
+        </div>
+      </div>
+      <p class="free-note">⭐ Нет звёзд? <b>Пригласи друга</b> — пробный доступ откроется сразу, а оплатить можно через админа.</p>
+    </section>
+
+    <section id="faq">
+      <h2>Вопросы</h2>
+      <p class="sub">Коротко о главном.</p>
+      <details>
+        <summary>Что нужно для работы бота?</summary>
+        <p>Аккаунт Telegram и одна минута: в профиле включи «Автоматизацию чатов» и выбери этого бота. Дальше он отвечает сам.</p>
+      </details>
+      <details>
+        <summary>Бот пишет как я?</summary>
+        <p>На бесплатном тарифе — встроенные стили общения. По подписке (или за приглашённого друга) открываются свои стили: персона, манера, цели и запреты.</p>
+      </details>
+      <details>
+        <summary>Как оплатить?</summary>
+        <p>Звёздами Telegram прямо в боте. Если звёзд нет — пополнить баланс или оплатить через владельца бота.</p>
+      </details>
+      <details>
+        <summary>Это безопасно?</summary>
+        <p>Бот работает через штатный механизм «Автоматизации чатов» Telegram и отвечает только в тех чатах, где ты его включил. Отключить можно в любой момент.</p>
+      </details>
+      <details>
+        <summary>Что будет после пробного периода?</summary>
+        <p>Вернёшься на бесплатный тариф: встроенные стили и до 5 чатов. Всё, что было настроено, останется на месте.</p>
+      </details>
+    </section>
+
+    <section class="cta-band">
+      <h2>Попробуй прямо сейчас</h2>
+      <p>Подключение занимает минуту, бесплатный тариф — навсегда.</p>
+      <a class="btn btn-primary" href="https://t.me/blinjop_bot">Открыть бота в Telegram</a>
+    </section>
+
+    <footer>
+      <div>© 2026 TG Автопилот · Бот, который ведёт переписку за тебя</div>
+      <div>Поддержка: <a href="https://t.me/Richhantr">@Richhantr</a></div>
+    </footer>
+  </div>
+</body>
+</html>
